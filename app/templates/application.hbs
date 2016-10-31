@@ -1,3 +1,32 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class= "navbar navbar-inverse">
+	<div class="container-fluid">
+	  	<div class="navbar-header active">
+		    {{#link-to 'index' class="navbar-brand"}}
+		    	Kojuba Micro
+		    {{/link-to}}
+	    </div>
+	    <div class="collapse navbar-collapse">
+	      	<ul class="nav navbar-nav">
+        		{{!-- <li>{{ link-to 'About' 'about' class="button"}}</li> --}}
+        		<li>{{ link-to 'Contact Us' 'contact' class="button" }}</li>
+      		</ul>
+      		<ul class="nav navbar-nav navbar-right">
+	      		<li>
+	      			<a href="signup"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+	      		</li>
+	      		<li>
+	      			<a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+	      		</li>
+    		</ul>
+	    </div>    
+	</div>
+	<body>
+		{{outlet}}
+	</body>
+</nav>
 
-{{outlet}}
+
+
+
+
+
