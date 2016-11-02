@@ -7,22 +7,22 @@
 	    </div>
 	    <div class="collapse navbar-collapse">
 	      	<ul class="nav navbar-nav">
-        		{{!-- <li>{{ link-to 'About' 'about' class="button"}}</li> --}}
-        		{{!-- <li>{{ link-to 'Contact Us' 'contact' class="button" }}</li> --}}
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
-      			{{#if loginPage}}
-      				<li>
+      			{{!-- {{#if loginPage}} --}}
+      			{{#if session.isAuthenticated}}
+      				
+	      			<li>
+	      				<a href="#"><span class="glyphicon glyphicon-user" action="invalidateSession"></span>Logout</a>
+	      			</li>
+	      		{{else}}
+	      			<li>
 	      				<a href="signup" action="toggleLoginIcon"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
 	      			</li>
 	      			<li>
 	      				<a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
 	      			</li>
-	      		{{else}}
 
-	      			<li>
-	      				<a href="#"><span class="glyphicon glyphicon-user"></span>Logout</a>
-	      			</li>
 	      		{{/if}}
 
     		</ul>
